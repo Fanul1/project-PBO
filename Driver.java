@@ -1,45 +1,17 @@
-
-/**
- * Write a description of class Driver here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class Driver
+public abstract class Driver
 {
-    // instance variables - replace the example below with your own
     private String nama;
-    private int umur;
-    private char gender;
-    private Motor motor;
-    private Mobil mobil;
-    /**
-     * Constructor for objects of class Driver
-     */
-    public Driver(Motor motor)
-    {
-        this.motor = motor;
-    }
-    
-    public Driver(Mobil mobil)
-    {
-        this.mobil = mobil;
-    }
-    
-    public boolean haveMotor()
-    {
-        return motor != null;
-    }
+    private String gender;
 
-    public boolean haveMobil()
-    {
-        return mobil != null;
-    }
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
 
+    
+    public Driver (String nm, String gen) {
+        System.out.println("Terima kasih telah memesan driver ini");
+        this.nama = nm;
+        this.gender = gen;
+    }
+    public abstract void tersedia();
+    public String toString(){
+        return "Terima kasih telah memesan"+this.nama+"Gender"+this.gender;
+    }
 }

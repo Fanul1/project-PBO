@@ -1,33 +1,21 @@
-
-/**
- * Write a description of class Customer here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class Customer
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private String nama;
+    private String gender;
+    private String tujuan;
 
-    /**
-     * Constructor for objects of class Customer
-     */
-    public Customer()
-    {
-        // initialise instance variables
-        x = 0;
+    public Customer(String nama, String gender, String tujuan) {
+        this.nama = nama;
+        this.gender = gender;
+        this.tujuan = tujuan;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public String getName() {
+        return nama;
+    }
+    public String getGender() {
+        return gender;
+    }
+    public String getTujuan() {
+        return tujuan;
     }
 }
