@@ -5,7 +5,7 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Pemesanan
+public class Order
 {
     // instance variables - replace the example below with your own
     private int x;
@@ -13,7 +13,7 @@ public class Pemesanan
     /**
      * Constructor for objects of class Pemesanan
      */
-    public Pemesanan()
+    public Order()
     {
         // initialise instance variables
         x = 0;
