@@ -7,9 +7,13 @@ public class Cycle extends Vehicle
     }
     public void tersedia(){
         if (noplat == 0) {
-            System.out.println("Mobil tidak tersedia");
+            System.out.println("Motor tidak tersedia");
         }else {
-            System.out.println("Mobil tersedia");
+            System.out.println("Motor tersedia");
         }
+    }
+
+    public int getNoplat() {
+        return noplat;
     }
 }

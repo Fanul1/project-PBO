@@ -3,18 +3,32 @@ public class Driver
     private String nama;
     private String gender;
 
+    private Car mobil;
+
+    private Cycle motor;
+
 
     public Driver (String nm, String gen) {
         this.nama = nm;
         this.gender = gen;
     }
     public void addCar(int np){
-        Car mobil = new Car(np);
+         this.mobil = new Car(np);
     }
+
+    public Car getCar() {
+        return mobil;
+    }
+
     public void addCycle(int np) {
-        Cycle motor = new Cycle(np);
+        this.motor = new Cycle(np);
     }
-    public String toString(){
-        return "Terima kasih telah memesan"+this.nama+"Gender"+this.gender;
+
+    public Cycle getCycle() {
+        return motor;
+    }
+
+    public String getNama() {
+        return nama;
     }
 }

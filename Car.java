@@ -11,4 +11,8 @@ public class Car extends Vehicle{
             System.out.println("Mobil tersedia");
         }
     }
+
+    public int getNoplat() {
+        return noplat;
+    }
 }
