@@ -1,15 +1,14 @@
-public class Car extends Driver{
+public class Car extends Vehicle{
     public int noplat;
     
-    public Car(String nm, String gen, int np) {
-        super(nm, gen);
+    public Car(int np) {
         this.noplat=np;
     }
     public void tersedia(){
         if (noplat == 0) {
-            System.out.println("Tidak tersedia");
+            System.out.println("Mobil Tidak tersedia");
         }else {
-            System.out.println("Tersedia");
+            System.out.println("Mobil tersedia");
         }
     }
 }

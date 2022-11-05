@@ -1,16 +1,15 @@
-public class Cycle extends Driver
+public class Cycle extends Vehicle
 {
     public int noplat;
     
-    public Cycle(String nm, String gen, int np) {
-        super(nm, gen);
+    public Cycle(int np) {
         this.noplat=np;
     }
     public void tersedia(){
         if (noplat == 0) {
-            System.out.println("Tidak tersedia");
+            System.out.println("Mobil tidak tersedia");
         }else {
-            System.out.println("Tersedia");
+            System.out.println("Mobil tersedia");
         }
     }
 }
