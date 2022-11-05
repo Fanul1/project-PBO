@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Cycle
-comment1.params=nm\ gen\ np
-comment1.target=Cycle(java.lang.String,\ java.lang.String,\ int)
+comment1.params=np
+comment1.target=Cycle(int)
 comment2.params=
 comment2.target=void\ tersedia()
 numComments=3

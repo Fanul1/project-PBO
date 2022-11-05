@@ -8,6 +8,12 @@ public class Driver
         this.nama = nm;
         this.gender = gen;
     }
+    public void addCar(int np){
+        Car mobil = new Car(np);
+    }
+    public void addCycle(int np) {
+        Cycle motor = new Cycle(np);
+    }
     public String toString(){
         return "Terima kasih telah memesan"+this.nama+"Gender"+this.gender;
     }
