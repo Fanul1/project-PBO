@@ -2,15 +2,19 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
-
+/**
+ * Program Ojek Online
+ * @author Ridho Ferdiansa and Fanul Nastia
+ * @version 1.0
+ */
 public class Order
 {
-    //Constractor class order
+    //Constructor class order
     public static void order()
     {
         ArrayList<Driver> pengemudi = new ArrayList<>();
-        ArrayList<Car> mobil = new ArrayList<>();
-        ArrayList<Cycle> motor = new ArrayList<>();
+        //ArrayList<Car> mobil = new ArrayList<>();
+        //ArrayList<Cycle> motor = new ArrayList<>();
 
 
         pengemudi.add(new Driver("", ""));
@@ -37,16 +41,18 @@ public class Order
                 }
                 pengemudi.get(i).addCycle(i);
             }
-
         }
 
         Random acak = new Random();
         Scanner in = new Scanner(System.in);
+        Customer c = new Customer();
         System.out.println("Pemesanan  Ojek online");
         System.out.print("Masukkan nama anda: ");
         String name = in.nextLine();
+        c.setName(name);
         System.out.print("Masukkan gender");
         String gen = in.nextLine();
+        c.setGender(gen);
         tujuan();
         System.out.print("Masukkan nomor tujuan anda: ");
         int tj = in.nextInt();
@@ -60,21 +66,20 @@ public class Order
                 System.out.println("Harga 12rb");
                 break;
             case 3:
-                System.out.println("Tujuan Masjid Raya ");
-                System.out.println("Harga 10rb");
+                System.out.println("Tujuan Masjid Raya Baiturrahman");
+                System.out.println("Harga 20rb");
                 break;
             case 4:
-                System.out.println("Tujuan Darussalam");
-                System.out.println("Harga 10rb");
+                System.out.println("Tujuan Ulee Lheu");
+                System.out.println("Harga 30rb");
                 break;
             case 5:
-                System.out.println("Tujuan Darussalam");
-                System.out.println("Harga 10rb");
+                System.out.println("Tujuan Lueng Bata");
+                System.out.println("Harga 15rb");
                 break;
             default:
                 break;
         }
-        Customer c = new Customer(name, gen);
 
         System.out.println("Pilihan kendaraan :\n1. mobil\n2. motor");
         System.out.print("Masukkan nomor pilihan kendaraan : ");
@@ -98,10 +103,13 @@ public class Order
         System.out.println("Selamat menikmati perjalanan");
         tunggu(5);
         System.out.println("Anda telah sampai ditujuan");
-        System.out.println("Terimak kasih sudah menggunkan layanan kami");
-
+        System.out.printf("Terimak kasih" +c.getName(name)+ "("+c.getGender(gen)+") sudah menggunakan layanan kami");
+        in.close();
 
     }
+    /**
+     * Menu lokasi yang dituju
+     */
     public static void tujuan(){
 
         System.out.println("Pilihan tujuan:");
@@ -111,7 +119,10 @@ public class Order
         System.out.println("4. Ulee Lheu");
         System.out.println("5. Lueng Bata");
     }
-
+    /**
+     * Waiting Time
+     * @param i waktu tunggu
+     */
     static void tunggu(int i){
         System.out.println("\n.\n.\n.");
         TimeUnit time = TimeUnit.SECONDS;
@@ -121,11 +132,12 @@ public class Order
         catch(InterruptedException e){}
 
     }
-
+    /**
+     * Main utama dari program
+     * @param args
+     */
     public static void main(String[] args) {
         order();
-
-
     }
 
 }
