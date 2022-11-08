@@ -1,7 +1,15 @@
 #BlueJ class context
 comment0.target=Order
+comment0.text=\r\n\ Program\ Ojek\ Online\r\n\ @author\ Ridho\ Ferdiansa\ and\ Fanul\ Nastia\r\n\ @version\ 1.0\r\n
 comment1.params=
-comment1.target=Order()
-comment2.params=args
-comment2.target=void\ main(java.lang.String[])
-numComments=3
+comment1.target=void\ order()
+comment2.params=
+comment2.target=void\ tujuan()
+comment2.text=\r\n\ Menu\ lokasi\ yang\ dituju\r\n
+comment3.params=i
+comment3.target=void\ tunggu(int)
+comment3.text=\r\n\ Waiting\ Time\r\n\ @param\ i\ waktu\ tunggu\r\n
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+comment4.text=\r\n\ Main\ utama\ dari\ program\r\n\ @param\ args\r\n
+numComments=5

@@ -1,7 +1,13 @@
 #BlueJ class context
 comment0.target=Car
+comment0.text=\r\n\ Class\ Car\ inherintance\ dari\ abstract\ class\ vehicle\r\n\ \r\n
 comment1.params=np
 comment1.target=Car(int)
+comment1.text=\r\n\ Methods\ Constructor\ Car\r\n\ @param\ np\ no\ plat\r\n
 comment2.params=
 comment2.target=void\ tersedia()
-numComments=3
+comment2.text=\r\n\ Method\ mengecek\ ketersediaan\r\n
+comment3.params=
+comment3.target=int\ getNoplat()
+comment3.text=\r\n\ Method\ mengembalikan\ no\ plat\ mobil\r\n\ @return\ no\ plat\r\n
+numComments=4

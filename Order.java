@@ -9,13 +9,11 @@ import java.util.concurrent.TimeUnit;
  */
 public class Order
 {
-    //Constructor class order
+    //Method order tentang kesrluruhan proses pemesanan
     public static void order()
     {
+        //Arraylist yang akan menyimpan daftar pengemudi
         ArrayList<Driver> pengemudi = new ArrayList<>();
-        //ArrayList<Car> mobil = new ArrayList<>();
-        //ArrayList<Cycle> motor = new ArrayList<>();
-
 
         pengemudi.add(new Driver("", ""));
         pengemudi.add(new Driver("Asep", "L"));
@@ -33,7 +31,7 @@ public class Order
         for(int i = 0; i<=11; i++)
         {
             if(i < 6) {
-                pengemudi.get(i).addCar(i);;
+                pengemudi.get(i).addCar(i);
             }
             else{
                 if(i == 6){
@@ -50,7 +48,7 @@ public class Order
         System.out.print("Masukkan nama anda: ");
         String name = in.nextLine();
         c.setName(name);
-        System.out.print("Masukkan gender");
+        System.out.print("Masukkan gender: ");
         String gen = in.nextLine();
         c.setGender(gen);
         tujuan();
@@ -88,22 +86,34 @@ public class Order
         if(pilih == 1){
             int i = acak.nextInt(5);
             pengemudi.get(i).getCar().tersedia();
+            if(pengemudi.get(i).getCar().getNoplat() == 0)
+            {
+                System.out.println("Maaf kendaraaan yang ingin anda pesan sedang tidak tersedia, coba beberapa saat lagi.\n\n");
+                tunggu();
+                order();
+            }
             System.out.println("Nama pengemudi :" + pengemudi.get(i).getNama() + " dengan no plat " + pengemudi.get(i).getCar().getNoplat());
         }
         else if(pilih == 2)
         {
             int i = acak.nextInt(5) + 6;
             pengemudi.get(i).getCycle().tersedia();
+            if(pengemudi.get(i).getCycle().getNoplat() == 0)
+            {
+                System.out.println("Maaf kendaraaan yang ingin anda pesan sedang tidak tersedia, coba beberapa saat lagi.\n\n");
+                tunggu();
+                order();
+            }
             System.out.println("Nama pengemudi :" + pengemudi.get(i).getNama() + " dengan no plat " + pengemudi.get(i).getCycle().getNoplat());
         }
         System.out.println("Pengemudi akan sampai beberapa saat lagi");
 
-        tunggu(5);
+        tunggu();
         System.out.println("Pengemudi sampai");
         System.out.println("Selamat menikmati perjalanan");
-        tunggu(5);
+        tunggu();
         System.out.println("Anda telah sampai ditujuan");
-        System.out.printf("Terimak kasih" +c.getName(name)+ "("+c.getGender(gen)+") sudah menggunakan layanan kami");
+        System.out.printf("Terima kasih " +c.getName(name)+ "("+c.getGender(gen)+") sudah menggunakan layanan kami");
         in.close();
 
     }
@@ -121,20 +131,20 @@ public class Order
     }
     /**
      * Waiting Time
-     * @param i waktu tunggu
      */
-    static void tunggu(int i){
+    static void tunggu(){
         System.out.println("\n.\n.\n.");
         TimeUnit time = TimeUnit.SECONDS;
         try{
-            time.sleep(i);
+            time.sleep(5);
         }
-        catch(InterruptedException e){}
-
+        catch(InterruptedException e){
+            System.out.println("..");
+        }
     }
     /**
      * Main utama dari program
-     * @param args
+     * @param args argumen
      */
     public static void main(String[] args) {
         order();

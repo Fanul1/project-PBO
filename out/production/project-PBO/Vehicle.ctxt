@@ -1,5 +1,7 @@
 #BlueJ class context
 comment0.target=Vehicle
+comment0.text=\r\n\ Abstract\ Class\r\n
 comment1.params=
 comment1.target=void\ tersedia()
+comment1.text=\r\n\ Method\ abstract\r\n
 numComments=2
