@@ -1,7 +1,16 @@
 #BlueJ class context
 comment0.target=Cycle
-comment1.params=np
-comment1.target=Cycle(int)
-comment2.params=
-comment2.target=void\ tersedia()
-numComments=3
+comment0.text=\r\n\ Class\ Cycle\ inherintance\ dari\ abstract\ class\ vehicle\r\n\ \r\n
+comment1.params=
+comment1.target=Cycle()
+comment1.text=\r\n\ Method\ Constructor\ Cycle\r\n
+comment2.params=np
+comment2.target=Cycle(int)
+comment2.text=\r\n\ Method\ Constructor\ Cycle\ dengan\ parameter\r\n\ @param\ np\ no\ plat\r\n
+comment3.params=
+comment3.target=void\ tersedia()
+comment3.text=\r\n\ Method\ mengecek\ ketersediaan\r\n
+comment4.params=
+comment4.target=int\ getNoplat()
+comment4.text=\r\n\ Method\ mengembalikan\ no\ plat\ motor\r\n\ @return\ no\ plat\r\n
+numComments=5
